@@ -1,0 +1,211 @@
+[
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestConfig",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestConfig",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestDataSet",
+        "importPath": "data_generator",
+        "description": "data_generator",
+        "isExtraImport": true,
+        "detail": "data_generator",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestDataSet",
+        "importPath": "data_generator",
+        "description": "data_generator",
+        "isExtraImport": true,
+        "detail": "data_generator",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "importPath": "scipy",
+        "description": "scipy",
+        "isExtraImport": true,
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestAnalyzer",
+        "importPath": "tester",
+        "description": "tester",
+        "isExtraImport": true,
+        "detail": "tester",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestReporter",
+        "importPath": "reporter",
+        "description": "reporter",
+        "isExtraImport": true,
+        "detail": "reporter",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestConfig",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class ABTestConfig:\n    \"\"\"\n    Configuration parameters for the A/B testing simulation.\n    \"\"\"\n    def __init__(self,\n                 n_control: int = 1000,\n                 n_test: int = 1000,\n                 baseline_conversion_rate: float = 0.10,\n                 expected_uplift: float = 0.00,\n                 alpha: float = 0.05,",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ABTestConfig:\n    \"\"\"\n    Configuration parameters for the A/B testing simulation.\n    \"\"\"\n    def __init__(self,\n                 n_control: int = 1000,\n                 n_test: int = 1000,\n                 baseline_conversion_rate: float = 0.10,\n                 expected_uplift: float = 0.00,",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestDataSet",
+        "kind": 6,
+        "importPath": "data_generator",
+        "description": "data_generator",
+        "peekOfCode": "class ABTestDataSet:\n    \"\"\"\n    Manages A/B test data, including generation of synthetic data or loading existing data.\n    \"\"\"\n    def __init__(self, config: ABTestConfig, control_df: pd.DataFrame = None, test_df: pd.DataFrame = None):\n        \"\"\"\n        Initializes the data set. If control_df and test_df are provided, they are used.\n        Otherwise, synthetic data is generated.\n        Args:\n            config (ABTestConfig): Configuration object for parameters.",
+        "detail": "data_generator",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "data_generator",
+        "description": "data_generator",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ABTestDataSet:\n    \"\"\"\n    Manages A/B test data, including generation of synthetic data or loading existing data.\n    \"\"\"\n    def __init__(self, config: ABTestConfig, control_df: pd.DataFrame = None, test_df: pd.DataFrame = None):\n        \"\"\"\n        Initializes the data set. If control_df and test_df are provided, they are used.\n        Otherwise, synthetic data is generated.\n        Args:",
+        "detail": "data_generator",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestReporter",
+        "kind": 6,
+        "importPath": "reporter",
+        "description": "reporter",
+        "peekOfCode": "class ABTestReporter:\n    \"\"\"\n    Generates reports and visualizations for A/B test results.\n    Modified to return outputs for Streamlit.\n    \"\"\"\n    def __init__(self, analysis_results: dict):\n        \"\"\"\n        Initializes the reporter with analysis results from ABTestAnalyzer.\n        \"\"\"\n        if not isinstance(analysis_results, dict) or not analysis_results:",
+        "detail": "reporter",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "reporter",
+        "description": "reporter",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ABTestReporter:\n    \"\"\"\n    Generates reports and visualizations for A/B test results.\n    Modified to return outputs for Streamlit.\n    \"\"\"\n    def __init__(self, analysis_results: dict):\n        \"\"\"\n        Initializes the reporter with analysis results from ABTestAnalyzer.\n        \"\"\"",
+        "detail": "reporter",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestAnalyzer",
+        "kind": 6,
+        "importPath": "tester",
+        "description": "tester",
+        "peekOfCode": "class ABTestAnalyzer:\n    \"\"\"\n    Performs statistical analysis on A/B test data.\n    \"\"\"\n    def __init__(self, dataset: ABTestDataSet):\n        \"\"\"\n        Initializes the analyzer with an ABTestDataSet.\n        \"\"\"\n        self.dataset = dataset\n        self.config = dataset.config",
+        "detail": "tester",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "tester",
+        "description": "tester",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ABTestAnalyzer:\n    \"\"\"\n    Performs statistical analysis on A/B test data.\n    \"\"\"\n    def __init__(self, dataset: ABTestDataSet):\n        \"\"\"\n        Initializes the analyzer with an ABTestDataSet.\n        \"\"\"\n        self.dataset = dataset",
+        "detail": "tester",
+        "documentation": {}
+    },
+    {
+        "label": "ABTestSimulator",
+        "kind": 6,
+        "importPath": "tester_app",
+        "description": "tester_app",
+        "peekOfCode": "class ABTestSimulator:\n    \"\"\"\n    Orchestrates the entire A/B testing simulation process.\n    \"\"\"\n    def __init__(self, config: ABTestConfig, control_df: pd.DataFrame = None, test_df: pd.DataFrame = None):\n        \"\"\"\n        Initializes the simulator with a configuration.\n        Optionally takes existing dataframes for analysis.\n        \"\"\"\n        self.config = config",
+        "detail": "tester_app",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "tester_app",
+        "description": "tester_app",
+        "peekOfCode": "def main():\n    st.set_page_config(layout=\"wide\", page_title=\"A/B Testing Simulator\")\n    st.title(\"🧪 A/B Testing Simulator & Analyzer\")\n    st.markdown(\"\"\"\n        Design and analyze simulated A/B tests or upload your own data to compare product feature impacts.\n        This tool uses t-tests to determine statistical significance.\n    \"\"\")\n    # --- Sidebar for Configuration ---\n    st.sidebar.header(\"Experiment Configuration\")\n    analysis_mode = st.sidebar.radio(",
+        "detail": "tester_app",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "tester_app",
+        "description": "tester_app",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ABTestSimulator:\n    \"\"\"\n    Orchestrates the entire A/B testing simulation process.\n    \"\"\"\n    def __init__(self, config: ABTestConfig, control_df: pd.DataFrame = None, test_df: pd.DataFrame = None):\n        \"\"\"\n        Initializes the simulator with a configuration.\n        Optionally takes existing dataframes for analysis.\n        \"\"\"",
+        "detail": "tester_app",
+        "documentation": {}
+    }
+]
