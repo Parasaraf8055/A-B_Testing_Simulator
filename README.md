@@ -4,6 +4,7 @@ a Simulator for A and B specially for ml models , strategies and any two items u
 # 🧪 A/B Testing Simulator & Analyzer
 
 An interactive Streamlit web application designed to simulate A/B tests and perform statistical analysis to determine the impact of product features or different models/strategies. This tool helps understand A/B testing principles, estimate statistical significance, and make data-driven decisions.
+Preview :- https://abtestingsimulator.streamlit.app/
 
 ## ✨ Key Features
 
